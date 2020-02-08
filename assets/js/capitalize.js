@@ -13,5 +13,26 @@
  * @return {string}
  */
 function capitalize(input) {
+    let res = '';
 
+
+    for (let char in input) {
+        
+        if (input[+char -1] == ' ')
+        {
+            res += input[char].toUpperCase();
+        } 
+        else 
+        {
+            res += input[char]
+        }
+    }
+
+    res = res[0].toUpperCase() + res.slice(1);
+
+    return res;
 }
+
+
+console.log(capitalize('а роза упала на лапу Азора'));
+console.log(capitalize('Use the force, Luke'));
