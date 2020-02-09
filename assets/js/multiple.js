@@ -13,4 +13,18 @@
  */
 function multiple(a, b) {
 
+    let c=0;
+
+    for (let i=0; i<b; i++)
+    {
+        c+=a;
+    }
+
+    return c;
 }
+
+console.log('Задание №5');
+console.log(multiple(1, 1));
+console.log(multiple(1, 2));
+console.log(multiple(0, 0));
+console.log(multiple(4, 3));

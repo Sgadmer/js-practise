@@ -16,4 +16,30 @@
  */
 function getMinMax(input) {
 
+
+    let inputArr = input.replace(/[,\"\']/g, '');
+        inputArr = inputArr.split(' ');
+    
+  
+    for (let i=0; i <inputArr.length; i++)
+    {
+        if (isNaN(inputArr[i])) 
+        {
+             inputArr.splice(i, 1);
+             i--;
+        }
+    }
+    
+
+    inputArr.sort(( a, b ) =>  a - b);
+
+    let Min = inputArr[0];
+    let Max = inputArr[inputArr.length - 1];
+
+    return  `{ max: ${Max}, min: ${Min} }`;
 }
+
+
+console.log('Задание №3');
+console.log(getMinMax('1 и 6.45, -2, но 8, а затем 15, то есть 2.7 и -1028'));
+console.log(getMinMax('"To Infinity and beyond", - repeated Buzz Lightyear 4 times in a row'));

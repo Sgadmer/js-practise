@@ -33,6 +33,6 @@ function capitalize(input) {
     return res;
 }
 
-
+console.log('Задание №2');
 console.log(capitalize('а роза упала на лапу Азора'));
 console.log(capitalize('Use the force, Luke'));

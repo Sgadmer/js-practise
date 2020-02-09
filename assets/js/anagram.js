@@ -31,6 +31,7 @@ function anagram(first, second) {
     }
 }
 
+console.log('Задание №1');
 console.log(anagram('Statue of Liberty', 'Built to stay free'));
 console.log(anagram('просветитель', 'терпеливость'));
 console.log(anagram('апельсин', 'Апельсин'));

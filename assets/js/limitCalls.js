@@ -20,4 +20,19 @@
  */
 function limitCalls(fn, maxCalls) {
 
+      function Func ()
+      {
+      if (maxCalls != 0) {fn(); maxCalls--;}
+      else console.log(undefined);            /*Можно убрать эту строку, тогда в коносоли вызов последних двух limitedLog(); ничего не покажет, но по заданию должно быть undefined*/
+      }
+
+    return Func;
 }
+
+
+console.log('Задание №4');
+const limitedLog = limitCalls(() => console.log('log'), 2);
+   limitedLog();
+   limitedLog();
+   limitedLog();
+   limitedLog();
